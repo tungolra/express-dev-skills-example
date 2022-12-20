@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Add Skill</title>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs'); %>
+    <h1>Add Skill</h1>
+    <form action="/skills" method="POST" autocomplete="off">
+      <input type="text" name="skillNameAttr" />
+      <button type="submit">Add New Skill</button>
+    </form>
+
+    <%- include('../partials/footer.ejs'); %>
+  </body>
+</html>

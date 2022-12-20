@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Update Skill</title>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs'); %>
+
+    <h1>Update Skill</h1>
+    <div class="form">
+      <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+        <input type="text" name="updateSkill" value="<%=skill.name%>">
+        <button type="submit">Save Skill</button>
+        <input type="checkbox" name="done">
+      </form>
+    </div>
+      <%- include('../partials/footer.ejs'); %>
+  </body>
+</html>

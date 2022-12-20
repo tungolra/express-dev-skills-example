@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Express Skills</title>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs'); %>
+    <h1>These are the req'd skills:</h1>
+    <ul class="skills">
+      <% skills.forEach(function(skill){ %>
+      <li><a href="/skills/<%=skill.id%>"> <%= skill.name %></a>
+      - <%= skill.done ? "Completed" : "Incomplete" %>
+      </li>
+      <% }) %>
+    </ul>
+    <a class="add-button" href="/skills/new"> <button> Add New Skill </button></a>
+    <%- include('../partials/footer.ejs'); %>
+  </body>
+</html>
